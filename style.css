@@ -1,0 +1,65 @@
+:root {
+    --bg:           #0f1111;
+    --header:       #1c2321;
+    --line:         #38373b;
+    --shadow:       #4e1c0d;
+    --block:        #8c2e0f;
+    --border:       #c24f1d;
+    --highlight:    #dd8838;
+    --text:         #dbd1bc;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.3rem;
+
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: justify;
+}
+
+a {
+    color: var(--highlight);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "IBM Plex Mono", monospace;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+a:hover{
+    color: var(--text);
+    transform: scale(1.08);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Syne", sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    text-align: center;
+}
+
+code {
+    display: block;
+    margin: 40px;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 20px auto;
+}
