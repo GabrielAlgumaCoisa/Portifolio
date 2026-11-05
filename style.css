@@ -24,7 +24,7 @@ body {
     line-height: 1.5;
     margin: 0 auto;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1000px;
     text-align: justify;
 }
 
@@ -83,6 +83,20 @@ ol {
 
 ul {
     list-style-type: square;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.header-info span + span::before {
+    content: "•";
+    margin-right: 12px;
+    color: var(--muted);
 }
 
 #footer {
