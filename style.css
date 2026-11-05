@@ -1,13 +1,18 @@
 :root {
-    --bg:           #00030E; /* Quase Preto */
-    --header:       #0B0E1A; /* Preto Azulado */
-    --line:         #2C1B2F; /* Roxo Escuro */
-    --shadow:       #00030E; /* Quase Preto */
-    --block:        #B47A9A; /* Rosa Antigo (Hover) */
-    --border:       #5E3A5C; /* Ameixa */
-    --highlight:    #F3E9EC; /* Off-White */
-    --text:         #F3E9EC; /* Off-White */
-    --muted:        #5E3A5C; /* Ameixa */
+    --bg:           #0F1111; /* Preto */
+    --header:       #1C2321; /* Preto Esverdeado */
+    --line:         #38373B; /* Cinza Escuro */
+    --shadow:       #000000; /* Preto */
+
+    --block:        #C24F1D; /* Laranja Queimado */
+    --border:       #4E1C0D; /* Marrom Avermelhado */
+
+    --highlight:    #DD8838; /* Âmbar */
+    --text:         #F0E8D8; /* Off-White */
+    --muted:        #B5AA9A; /* Bege Acinzentado */
+
+    --paper:        #F0E8D8; /* Papel */
+    --rust:         #8C2E0F; /* Ferrugem */
 }
 body {
     background: var(--bg);
@@ -48,8 +53,12 @@ h1 {
 }
 
 code {
+    color: var(--shadow);
     display: block;
+    background: var(--muted);
+
     margin: 40px;
+    padding: 20px;
     font-family: "IBM Plex Mono", monospace;
 }
 
