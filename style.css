@@ -23,7 +23,7 @@ body {
     text-align: justify;
 }
 
-a {
+nav > a {
     color: var(--highlight);
     text-decoration: none;
     font-size: 1.5rem;
@@ -33,7 +33,7 @@ a {
 }
 
 
-a:hover{
+nav > a:hover{
     color: var(--text);
     transform: scale(1.08);
 }
@@ -62,4 +62,28 @@ hr{
     border: none;
     border-top: 1px solid var(--line);
     margin: 20px auto;
+}
+
+#footer {
+    color: var(--line);
+}
+
+footer p{
+    text-align: end;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.social-links a img {
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.25);
 }
