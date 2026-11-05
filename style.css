@@ -1,14 +1,14 @@
 :root {
-    --bg:           #0f1111;
-    --header:       #1c2321;
-    --line:         #38373b;
-    --shadow:       #4e1c0d;
-    --block:        #8c2e0f;
-    --border:       #c24f1d;
-    --highlight:    #dd8838;
-    --text:         #dbd1bc;
+    --bg:           #00030E; /* Quase Preto */
+    --header:       #0B0E1A; /* Preto Azulado */
+    --line:         #2C1B2F; /* Roxo Escuro */
+    --shadow:       #00030E; /* Quase Preto */
+    --block:        #B47A9A; /* Rosa Antigo (Hover) */
+    --border:       #5E3A5C; /* Ameixa */
+    --highlight:    #F3E9EC; /* Off-White */
+    --text:         #F3E9EC; /* Off-White */
+    --muted:        #5E3A5C; /* Ameixa */
 }
-
 body {
     background: var(--bg);
     color: var(--text);
@@ -34,7 +34,7 @@ nav > a {
 
 
 nav > a:hover{
-    color: var(--text);
+    color: var(--block);
     transform: scale(1.08);
 }
 
@@ -65,7 +65,7 @@ hr{
 }
 
 #footer {
-    color: var(--line);
+    color: var(--muted);
 }
 
 footer p{
