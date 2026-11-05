@@ -91,8 +91,24 @@ footer p{
 
 .social-links a img {
     transition: transform 0.2s ease;
+    filter: brightness(0.7);
 }
 
 .social-links a:hover img {
     transform: scale(1.25);
+    filter: brightness(1.0);
+}
+
+.autor {
+    text-align: left;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+#more {
+    text-align: left; 
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
