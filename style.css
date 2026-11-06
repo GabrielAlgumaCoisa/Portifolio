@@ -85,6 +85,28 @@ ul {
     list-style-type: square;
 }
 
+.card {
+    background: var(--header);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 24px 0;
+    text-align: left;
+}
+
+.card img {
+    border: 2px solid var(--line);
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
+.card-legenda {
+    margin: 12px 4px 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+}
+
 .header-info {
     display: flex;
     align-items: center;
@@ -97,6 +119,11 @@ ul {
     content: "•";
     margin-right: 12px;
     color: var(--muted);
+}
+
+.explore {
+    text-decoration: none;
+    color: var(--block);
 }
 
 #footer {
@@ -125,6 +152,12 @@ ul {
     text-align: left;
     font-style: italic;
     font-size: 1.3rem;
+}
+
+.desc {
+    text-align: left;  
+    font-size: 1.3rem; 
+    color: var(--muted);
 }
 
 #more {
