@@ -62,12 +62,29 @@ code {
     font-family: "IBM Plex Mono", monospace;
 }
 
+/*nav config*/
+
 nav{
     display: flex;
     margin-left: 40px;
     margin-right: 40px;
     justify-content: space-between;
 }
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card nav a img {
+    width: auto;
+    height: 24px;
+    border: none;
+    display: inline-block;
+}
+
+/*other*/
 
 hr{
     border: none;
@@ -88,11 +105,18 @@ ul {
 }
 
 .card {
+    filter: brightness(1.0);
     background: var(--header);
     border-radius: 10px;
     padding: 16px;
-    margin: 24px 0;
+    margin: 24px 24px;
     text-align: left;
+
+    transition: filter 0.2s ease-in-out;
+}
+
+.card:hover {
+    filter: brightness(1.05);
 }
 
 .card img {
