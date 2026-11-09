@@ -1,6 +1,7 @@
 :root {
     --bg:           #0F1111; /* Preto */
     --header:       #1C2321; /* Preto Esverdeado */
+    --header_bright:#252e2b; /* Preto Esverdeado */
     --line:         #38373B; /* Cinza Escuro */
     --shadow:       #000000; /* Preto */
 
@@ -86,6 +87,18 @@ nav a {
 
 /*other*/
 
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 24px;
+}
+
+.skills .card {
+    margin: 0 ;
+}
+
+
 hr{
     border: none;
     border-top: 1px solid var(--line);
@@ -101,22 +114,28 @@ ol {
 }
 
 ul {
-    list-style-type: square;
+    list-style-type: disc;
+}
+
+.stack {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .card {
-    filter: brightness(1.0);
     background: var(--header);
     border-radius: 10px;
     padding: 16px;
     margin: 24px 24px;
     text-align: left;
 
-    transition: filter 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
 }
 
 .card:hover {
-    filter: brightness(1.05);
+    background: var(--header_bright);
 }
 
 .card img {
@@ -125,6 +144,21 @@ ul {
     width: 100%;
     height: auto;
 
+}
+
+.card img.icone {
+    width: auto;
+    height: 24px;
+    border: none;
+    display: inline-block;
+}
+
+.card img.iconec {
+    width: auto;
+    height: 20px;
+    border: none;
+    margin: 3px;
+    display: inline-block;
 }
 
 .card-legenda {
@@ -193,3 +227,4 @@ ul {
     margin-top: -20px;
     margin-bottom: 20px;
 }
+
