@@ -1,3 +1,7 @@
+/* ==========================================================================
+   1. VARIÁVEIS — paleta de cores global (usada em todo o site)
+   ========================================================================== */
+
 :root {
     --bg:           #0F1111; /* Preto */
     --header:       #1C2321; /* Preto Esverdeado */
@@ -15,6 +19,12 @@
     --paper:        #F0E8D8; /* Papel */
     --rust:         #8C2E0F; /* Ferrugem */
 }
+
+
+/* ==========================================================================
+   2. BASE — estilo geral da página (body e separadores)
+   ========================================================================== */
+
 body {
     background: var(--bg);
     color: var(--text);
@@ -29,20 +39,16 @@ body {
     text-align: justify;
 }
 
-nav > a {
-    color: var(--highlight);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: "IBM Plex Mono", monospace;
-    display: inline-block;
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 20px auto;
 }
 
 
-nav > a:hover{
-    color: var(--block);
-    transform: scale(1.08);
-}
+/* ==========================================================================
+   3. TIPOGRAFIA E CONTEÚDO — títulos, listas e blocos de código
+   ========================================================================== */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Syne", sans-serif;
@@ -51,6 +57,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     text-align: center;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+ul {
+    list-style-type: disc;
 }
 
 code {
@@ -63,21 +77,43 @@ code {
     font-family: "IBM Plex Mono", monospace;
 }
 
-/*nav config*/
 
-nav{
+/* ==========================================================================
+   4. NAVEGAÇÃO — menu (nav), links e ícones dentro dele
+   ========================================================================== */
+
+/* Container do menu */
+nav {
     display: flex;
     margin-left: 40px;
     margin-right: 40px;
     justify-content: space-between;
 }
 
+/* Links diretos do menu */
+nav > a {
+    color: var(--highlight);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "IBM Plex Mono", monospace;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+nav > a:hover {
+    color: var(--block);
+    transform: scale(1.08);
+}
+
+/* Alinhamento de ícone + texto (vem depois de "nav > a" de propósito:
+   o display: inline-flex sobrescreve o inline-block acima) */
 nav a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
 }
 
+/* Ícone dentro do link de nav que está dentro de um card */
 .card nav a img {
     width: auto;
     height: 24px;
@@ -85,44 +121,10 @@ nav a {
     display: inline-block;
 }
 
-/*other*/
 
-.skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin: 24px;
-}
-
-.skills .card {
-    margin: 0 ;
-}
-
-
-hr{
-    border: none;
-    border-top: 1px solid var(--line);
-    margin: 20px auto;
-}
-
-footer p{
-    text-align: end;
-}
-
-ol {
-    list-style-type: decimal-leading-zero;
-}
-
-ul {
-    list-style-type: disc;
-}
-
-.stack {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
+/* ==========================================================================
+   5. CARDS — caixa de projeto, imagens, ícones e legenda
+   ========================================================================== */
 
 .card {
     background: var(--header);
@@ -138,14 +140,15 @@ ul {
     background: var(--header_bright);
 }
 
+/* Imagem principal do card */
 .card img {
     border: 2px solid var(--line);
     display: block;
     width: 100%;
     height: auto;
-
 }
 
+/* Ícones pequenos dentro do card */
 .card img.icone {
     width: auto;
     height: 24px;
@@ -167,6 +170,35 @@ ul {
     font-size: 1rem;
 }
 
+
+/* ==========================================================================
+   6. LAYOUTS DE LISTA — grades que organizam os cards
+   (.skills precisa ficar depois de .card para sobrescrever a margem)
+   ========================================================================== */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 24px;
+}
+
+.skills .card {
+    margin: 0;
+}
+
+.stack {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+/* ==========================================================================
+   7. CABEÇALHO DE PÁGINA / TEXTOS AUXILIARES — info do projeto, autor, descrição
+   ========================================================================== */
+
 .header-info {
     display: flex;
     align-items: center;
@@ -175,15 +207,45 @@ ul {
     margin-bottom: 20px;
 }
 
+/* Separador "•" entre os itens do header-info */
 .header-info span + span::before {
     content: "•";
     margin-right: 12px;
     color: var(--muted);
 }
 
+.autor {
+    text-align: left;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+.desc {
+    text-align: left;
+    font-size: 1.3rem;
+    color: var(--muted);
+}
+
+#more {
+    text-align: left;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
 .explore {
     text-decoration: none;
     color: var(--block);
+}
+
+
+/* ==========================================================================
+   8. RODAPÉ — texto do footer e redes sociais
+   ========================================================================== */
+
+footer p {
+    text-align: end;
 }
 
 #footer {
@@ -207,24 +269,3 @@ ul {
     transform: scale(1.25);
     filter: brightness(1.0);
 }
-
-.autor {
-    text-align: left;
-    font-style: italic;
-    font-size: 1.3rem;
-}
-
-.desc {
-    text-align: left;  
-    font-size: 1.3rem; 
-    color: var(--muted);
-}
-
-#more {
-    text-align: left; 
-    font-style: italic;
-    font-size: 1.2rem;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
-
